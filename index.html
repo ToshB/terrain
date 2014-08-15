@@ -62,7 +62,7 @@
 					self.get(x + size, y + size),
 					self.get(x - size, y + size)
 			]);
-			self.get(x, y, ave + offset);
+			self.set(x, y, ave + offset);
 		}
 
 		function diamond(x, y, size, offset) {
@@ -89,7 +89,7 @@
 				var style = brightness(x, y, this.get(x + 1, y) - val);
 
 				rect(top, bottom, style);
-				//rect(water, bottom, 'rgba(50, 150, 200, 0.15)');
+				rect(water, bottom, 'rgba(50, 150, 200, 0.15)');
 			}
 		}
 
@@ -135,7 +135,7 @@
 	var height = display.height = window.innerHeight;
 
 	var terrain = new Terrain(9);
-	terrain.generate(0.7);
+	terrain.generate(0.8);
 	terrain.draw(ctx, width, height);
 </script>
 </body>
